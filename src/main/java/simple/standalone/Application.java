@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 import java.util.Arrays;
 
@@ -19,7 +20,9 @@ public class Application {
         assert (ctx != null);
         logger.info("The beans you were looking for:");
         // listing all bean definition    names
-        Arrays.stream(ctx.getBeanDefinitionNames()).forEach(logger::info);
+        for(String bean : ctx.getBeanDefinitionNames()){
+            System.out.println(bean);
+        }
         HelloWorld hw = ctx.getBean(HelloWorld.class);
         hw.sayHi();
         System.in.read();
