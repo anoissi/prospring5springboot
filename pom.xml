@@ -12,6 +12,7 @@
         <module>standaloneapp</module>
         <module>webapp</module>
         <module>jdbc</module>
+        <module>springmvc</module>
     </modules>
 
     <parent>
