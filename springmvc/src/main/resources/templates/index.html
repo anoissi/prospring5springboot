@@ -8,11 +8,9 @@
           rel="stylesheet" media="screen"/>
     <script src="http://cdn.jsdelivr.net/webjars/jquery/3.2.1/jquery.min.js"
             th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
-
     <title>
         ProSpring5 Singer Boot Application
     </title>
-
 </head>
 
 <body>
@@ -20,7 +18,7 @@
 <div class="container">
     <div class="text-left">
 
-        <h1>ProSpring5 Singer Management Boot & Thymeleaf Application</h1>
+        <h1 th:text="#{header_text}"></h1>
 
         <div class="lead">
            Welcome to ProSpring, 5th edition. Maybe not everything that is covered in the book is of interest to you,
